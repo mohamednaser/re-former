@@ -12,3 +12,22 @@
 <%
 =end%>
 
+<form type="POST" action="/users" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label for="username">Username</label>
+    <input type="text" name="username" required>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="email" required>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" required>
+  </div>
+  <br>
+  <button type="submit">submit</button>
+</form>
