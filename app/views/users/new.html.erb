@@ -1,33 +1,15 @@
 <h1>New User</h1>
 
-<%
-=begin%>
- <%= render 'form', user: @user %> 
-<%
-=end%>
 
-<%
-=begin%>
- <%= link_to 'Back', users_path %> 
-<%
-=end%>
+<%= form_with(url: "/users" , method: "post") do %>
+<%= label_tag(:username, "username") %>
+<%= text_field_tag(:username) %>
 
-<form type="post" action="/users" accept-charset="UTF-8">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <div>
-    <label for="username">Username</label>
-    <input type="text" name="username" required>
-  </div>
+<%= label_tag(:email, "email") %>
+<%= email_field(:email,'email') %>
 
-  <div>
-    <label for="email">Email</label>
-    <input type="email" name="email" required>
-  </div>
-
-  <div>
-    <label for="password">Password</label>
-    <input type="password" name="password" required>
-  </div>
-  <br>
-  <button type="submit">submit</button>
-</form>
+<%= label_tag(:passowrd, "password") %>
+<%= password_field_tag(:password) %>
+<br><br>
+<%= submit_tag('Create')%>
+<% end %>
