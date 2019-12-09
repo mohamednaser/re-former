@@ -37,6 +37,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    set_user
     respond_to do |format|
       if @user.update(user_params)
         format.html do
