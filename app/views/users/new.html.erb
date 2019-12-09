@@ -1,15 +1,16 @@
 <h1>New User</h1>
 
 
-<%= form_with(url: "/users" , method: "post") do %>
-<%= label_tag(:username, "username") %>
-<%= text_field_tag(:username) %>
+<%= form_with(url: "/users", scope: "user", method: "post") do |form| %>
 
-<%= label_tag(:email, "email") %>
-<%= email_field(:email,'email') %>
+<%= form.label(:username, "username") %>
+<%= form.text_field(:username) %>
 
-<%= label_tag(:passowrd, "password") %>
-<%= password_field_tag(:password) %>
+<%= form.label(:email, "email") %>
+<%= form.email_field(:email) %>
+
+<%= form.label(:passowrd, "password") %>
+<%= form.password_field(:password) %>
 <br><br>
-<%= submit_tag('Create')%>
+<%= form.submit('Create')%>
 <% end %>
