@@ -1,6 +1,6 @@
 # Pre-Former Project
 
-This Project Is PArt Of Microverse Studying Program you can check it here 
+This Project Is PArt Of Microverse Studying Program you can check it here
 
 ## Authors
 
@@ -23,7 +23,7 @@ $ cd re-former
 $ rails s
 ```
 
-## Bug Reporting 
+## Bug Reporting
 
 If you have any issue, request, or suggestion, post it [here](https://github.com/santiago-rodrig/tic_tac_toe/issues).
 
