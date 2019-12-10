@@ -14,3 +14,23 @@
 <br><br>
 <%= form.submit('Create')%>
 <% end %>
+
+<%
+=begin%>
+ <form method="post" action="/users"> 
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <label for="user_username">username</label>
+    <input type="text" name="user[username]" id="user_username" />
+
+    <label for="user_email">email</label>
+    <input type="email" name="user[email]" id="user_email" />
+
+    <label for="user_passowrd">password</label>
+    <input type="password" name="user[password]" id="user_password" />
+    <br><br>
+    <input type="submit" name="commit" value="Create" data-disable-with="Create" />
+    </form>
+</form>  
+<%
+=end%>
