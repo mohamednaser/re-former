@@ -1,14 +1,36 @@
 <h1>New User</h1>
 
-<%
-=begin%>
- <%= render 'form', user: @user %> 
-<%
-=end%>
+
+<%= form_with(url: "/users", scope: "user", method: "post") do |form| %>
+
+<%= form.label(:username, "username") %>
+<%= form.text_field(:username) %>
+
+<%= form.label(:email, "email") %>
+<%= form.email_field(:email) %>
+
+<%= form.label(:passowrd, "password") %>
+<%= form.password_field(:password) %>
+<br><br>
+<%= form.submit('Create')%>
+<% end %>
 
 <%
 =begin%>
- <%= link_to 'Back', users_path %> 
+ <form method="post" action="/users"> 
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <label for="user_username">username</label>
+    <input type="text" name="user[username]" id="user_username" />
+
+    <label for="user_email">email</label>
+    <input type="email" name="user[email]" id="user_email" />
+
+    <label for="user_passowrd">password</label>
+    <input type="password" name="user[password]" id="user_password" />
+    <br><br>
+    <input type="submit" name="commit" value="Create" data-disable-with="Create" />
+    </form>
+</form>  
 <%
 =end%>
-

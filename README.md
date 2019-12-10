@@ -1,24 +1,32 @@
-# README
+# Pre-Former Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Project Is PArt Of Microverse Studying Program you can check it here
 
-Things you may want to cover:
+## Authors
 
-* Ruby version
+This project was executed by the duo of:
 
-* System dependencies
+- [Mohamed Naser](https://www.linkedin.com/in/mohamednaseramein/)
+- [AbdulSamii Ajala ](https://github.com/jalasem)
 
-* Configuration
+## Used tools
 
-* Database creation
+- Ruby On Rails
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+Inside your terminal, type the following instructions. Make sure to be in a directory where you have permissions to create files.
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+$ git clone https://github.com/mohamednaser/re-former.git
+$ cd re-former
+$ rails s
+```
 
-* Deployment instructions
+## Bug Reporting
 
-* ...
+If you have any issue, request, or suggestion, post it [here](https://github.com/santiago-rodrig/tic_tac_toe/issues).
+
+### Note apart
+
+This project exists thanks to the [Microverse program](https://www.microverse.org/), that teaches people from all around the world how to become a software developer. If you're interested take a spin at their website.
